@@ -7,7 +7,6 @@
  import express from "express";
  import cors from "cors";
  import helmet from "helmet";
-import { Console } from "console";
  
  dotenv.config();
  
@@ -80,12 +79,12 @@ console.log(`Nomes dos Ubuntus:\n${nomeDosUbuntus}\n`)
 // R03
 let imcUbuntuArray:number[] = [];
 imcUbuntuArray.push(peso1 * Math.pow(altura1, 2));
-imcUbuntuArray.push(peso1 * Math.pow(altura2, 2));
-imcUbuntuArray.push(peso1 * Math.pow(altura3, 2));
+imcUbuntuArray.push(peso2 * Math.pow(altura2, 2));
+imcUbuntuArray.push(peso3 * Math.pow(altura3, 2));
 
 let imc1 = peso1 * (Math.pow(altura1, 2));
-let imc2 = peso1 * (Math.pow(altura2, 2));
-let imc3 = peso1 * (Math.pow(altura3, 2));
+let imc2 = peso2 * (Math.pow(altura2, 2));
+let imc3 = peso3 * (Math.pow(altura3, 2));
 console.log(`Imc1: ${imc1.toFixed(2)} Imc2: ${imc2.toFixed(2)} Imc3: ${imc3.toFixed(2)}\n`);
 
 let imcMedia = (imc1 + imc2 + imc3) / 3;
@@ -116,10 +115,6 @@ let silvas:string[] = nomes.filter(IsSilva);
 
 console.log("\nSilvas:");
 console.log(silvas);
-
-
-
-
 
  });
  

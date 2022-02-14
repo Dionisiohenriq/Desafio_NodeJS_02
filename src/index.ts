@@ -72,7 +72,7 @@ console.log(`Total das idades dos Ubuntus: ${totalIdadesUbuntus}\n`);
 
 
 // R02
-let nomeDosUbuntus = `Nome1: ${nome1} Nome2: ${nome2} Nome3: ${nome3}`;
+let nomeDosUbuntus = `Nome1: ${nome1} \nNome2: ${nome2} \nNome3: ${nome3}`;
 console.log(`Nomes dos Ubuntus:\n${nomeDosUbuntus}\n`)
 
 
@@ -85,7 +85,7 @@ imcUbuntuArray.push(peso3 * Math.pow(altura3, 2));
 let imc1 = peso1 * (Math.pow(altura1, 2));
 let imc2 = peso2 * (Math.pow(altura2, 2));
 let imc3 = peso3 * (Math.pow(altura3, 2));
-console.log(`Imc1: ${imc1.toFixed(2)} Imc2: ${imc2.toFixed(2)} Imc3: ${imc3.toFixed(2)}\n`);
+console.log(`Imc1: ${imc1.toFixed(2)} \nImc2: ${imc2.toFixed(2)} \nImc3: ${imc3.toFixed(2)}\n`);
 
 let imcMedia = (imc1 + imc2 + imc3) / 3;
 let mediaImcUbuntus = imcUbuntuArray.reduce( (media, item) => media + item) / 3;
@@ -104,17 +104,14 @@ for(let i in Devs){
 console.log("Qtd de devs:");
 console.log(resultado);
 
-
 // R05
-function IsSilva(nome: string){
-    return nome.includes("Silva");
-}
+let IsSilva = (nome: string) => nome.includes("Silva");
 
 let nomes:string[] = [nome1,nome2,nome3];
 let silvas:string[] = nomes.filter(IsSilva);
 
 console.log("\nSilvas:");
-console.log(silvas);
+silvas.forEach(silva => console.log(silva));
 
  });
  
